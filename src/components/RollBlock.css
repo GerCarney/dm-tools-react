@@ -1,0 +1,65 @@
+.roll-block {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 5px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.roll-name {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.roll-query {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.roll-num {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.roll-num.crit {
+    color: #f3ec8b;
+}
+
+.roll-num.fail {
+    color: #f16868;
+}
+
+.roll-num {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.roll-num:after {
+    content: '+';
+    font-weight: 100;
+    color: white;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0px 5px;
+}
+
+.roll-num:last-child:after {
+    content: ''
+}
+
+.roll-total {
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 10px;
+}

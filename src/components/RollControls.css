@@ -1,0 +1,32 @@
+.roll-controls {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    color: white;
+}
+
+.roll-controls h4 {
+    margin: 10px 0;
+}
+
+.roll-controls .btn-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.roll-controls input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: 0;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}

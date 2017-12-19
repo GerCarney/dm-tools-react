@@ -15,20 +15,38 @@ class RollControls extends Component {
     }
     
 
+    // Roll Method
+
     roll = (query) => {
         this.props.rollDice(query);
     }
 
-    handleChange = (e) => {
-        this.setState({inputVal:e.target.value});
-   }
+    // Form Input
 
-    keyPress = (e) => {
-      if(e.keyCode == 13){
-        this.props.rollDice(this.state.inputVal);
-        this.setState({inputVal:''})
-      }
-   }
+        handleChange = (e) => {
+            this.setState({inputVal:e.target.value});
+        }
+
+        keyPress = (e) => {
+          if(e.keyCode == 13){
+            this.props.rollDice(this.state.inputVal);
+            this.setState({inputVal:''})
+          }
+        }
+
+    // End Form Input
+
+
+    // Generate Roll Buttons
+
+   dicePresets = [20,12,10,8,6,4];
+
+    diceButtons = () => {
+       return this.dicePresets.map((die)=> 
+            <SquareBtn onClick={() => this.roll('1d'+die)} icon={RollIcon}>{die}</SquareBtn>   
+        )
+    }
+
 
 
     render() {
@@ -36,12 +54,9 @@ class RollControls extends Component {
             <div className="roll-controls">
                  <input value={this.state.inputVal} placeholder="eg. 1d6" onChange={this.handleChange} onKeyDown={this.keyPress} type="text"/>
                  <div className="btn-wrap">
-                     <SquareBtn onClick={() => this.roll('1d20')} icon={RollIcon}>20</SquareBtn>
-                     <SquareBtn icon={RollIcon}>12</SquareBtn>
-                     <SquareBtn icon={RollIcon}>10</SquareBtn>
-                     <SquareBtn icon={RollIcon}>8</SquareBtn>
-                     <SquareBtn icon={RollIcon}>6</SquareBtn>
-                     <SquareBtn icon={RollIcon}>4</SquareBtn>
+
+                    {this.diceButtons()}
+
                  </div>
             </div>
         );

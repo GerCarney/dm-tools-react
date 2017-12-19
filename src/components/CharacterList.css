@@ -1,0 +1,6 @@
+.feed {
+    height: calc(100% - 110px);
+    overflow:auto;
+    position: absolute;
+    width:100%;
+}

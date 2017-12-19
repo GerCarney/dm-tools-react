@@ -18,10 +18,12 @@ class RollBlock extends Component {
         let r = this.props.roll;
         return (
             <div className="roll-block">
-                <div className="roll-name">Longsword</div>
+                <div className="roll-name">Roll</div>
+
                 <div className="roll-query">Rolling {r.query}</div>
 
                 <div className="roll-list">
+
                     {
                         r.rolls.map( (roll,i) => 
                             <span key={i} className="roll-num">
@@ -32,7 +34,6 @@ class RollBlock extends Component {
                     }
 
                     {this.getModifier()}
-
                         
                     
                 </div>

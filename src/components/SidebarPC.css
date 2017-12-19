@@ -3,5 +3,14 @@
     padding:10px;
     background-color:rgba(0,0,0,0.6);
     border-bottom:2px solid #333;
-    
+}
+
+.sb-pc .name{
+	color:white;
+	font-size:20px;
+}
+
+.sb-pc .btn-row{
+	display:flex;
+	justify-content: space-around;
 }

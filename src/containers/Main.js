@@ -6,7 +6,11 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
-                <div>Main </div>
+                <div>
+
+             
+
+                </div>
             </div>
         );
     }

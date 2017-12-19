@@ -4,6 +4,9 @@ import './RightBar.css'
 import RollControls from '../components/RollControls.js'
 import RollFeed from '../components/RollFeed.js'
 
+import DiceRoller from 'roll-dice'
+
+
 import { connect } from 'react-redux'
 import { roll } from '../actions'
 
@@ -11,7 +14,11 @@ import { roll } from '../actions'
 class RightBar extends Component {
 
     rollDice = (query) => {
-        this.props.rollDice(query);
+
+        let diceRoller = new DiceRoller();
+        let result = diceRoller.roll(query);
+        
+        this.props.rollDice(result, query);
     }
 
     render () {
@@ -32,8 +39,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        rollDice: query => {
-            dispatch(roll(query))
+        rollDice: (data,query) => {
+            dispatch(roll(data,query))
         }
     }
 }

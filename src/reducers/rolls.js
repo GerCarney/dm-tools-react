@@ -4,7 +4,8 @@ const rolls = (state = rollsInitialState, action) => {
     switch (action.type) {
         case 'ROLL':
 
-            return [...state, action.rollData];
+
+            return [action, ...state];
         default:
             return state
     }

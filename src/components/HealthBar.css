@@ -1,0 +1,38 @@
+.hp-container {}
+
+.hp-values {
+    display: inline-block;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    color: #ccc;
+}
+
+.hp-bar {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.hp-bar:hover .hp-fill {
+    background-color: #65ac68
+}
+
+.hp-bar:hover {
+    background-color: rgba(211, 141, 141, 0.7);
+}
+
+.hp-fill {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    transition: 0.5s all;
+}
+
+.healthbar .hp-values {}

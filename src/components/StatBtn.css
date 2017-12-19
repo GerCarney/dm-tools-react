@@ -1,0 +1,24 @@
+.sq-btn {
+display:inline-block;
+margin:10px 5px;
+
+}
+
+.sq-btn button {
+    height:30px;
+    border:0;
+    border-radius: 5px;
+    background-color:#333;
+    background-size:25px;
+    background-position:2px 50%;
+    background-repeat: no-repeat;
+    outline:0;
+    padding-left:30px;
+    color:white;
+    font-size:17px;
+}
+
+.sq-btn button:hover{
+    background-color:#555;
+
+}

@@ -1,9 +1,10 @@
 const ROLL = 'ROLL'
 
-export const roll = (rollData) => {
+export const roll = (rollData, query) => {
     return {
         type: ROLL,
-        rollData
+        ...rollData,
+        query
     }
 }
 

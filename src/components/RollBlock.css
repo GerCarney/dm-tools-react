@@ -1,12 +1,12 @@
 .roll-block {
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 10px 5px;
     color: white;
     padding-bottom: 20px;
 }
 
 .roll-name {
-    font-size: 25px;
+    font-size: 17px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px 0;
     font-weight: bold;
@@ -26,6 +26,7 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: bold;
+    display:inline-block;
 }
 
 .roll-num.crit {
@@ -52,7 +53,9 @@
 }
 
 .roll-num:last-child:after {
-    content: ''
+    content: '';
+    margin:0;
+
 }
 
 .roll-total {

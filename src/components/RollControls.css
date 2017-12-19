@@ -1,7 +1,10 @@
 .roll-controls {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 10px;
     color: white;
+    height:110px;
+    position:absolute;
+    bottom:0;
 }
 
 .roll-controls h4 {

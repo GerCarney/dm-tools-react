@@ -15,7 +15,7 @@ return {
     render() {
         return (
             <div className="sq-btn">
-                <button style={this.btnStyle()}>{this.props.children}</button>
+                <button onClick={() => this.props.onClick()} style={this.btnStyle()}>{this.props.children}</button>
             </div>
         );
     }

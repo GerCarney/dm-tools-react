@@ -7,6 +7,7 @@ export default {
     },
 
     players: [{
+        id:0,
         name: "Snorre",
         armor:18,
         health: {

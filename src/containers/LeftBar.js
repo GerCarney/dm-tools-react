@@ -8,12 +8,17 @@ import {connect} from 'react-redux'
 import './LeftBar.css'
 
 class LeftBar extends Component {
+
+    editVal = (data) => {
+        console.log('parent',data);
+    }
+
     render() {
         return (
             <div className="lb">
             <CharacterList>
             {
-                this.props.players.map((player,i) => <SidebarPC key={i} player={player} />)
+                this.props.players.map((player,i) => <SidebarPC editVal={this.editVal} key={i} player={player} />)
             }
             </CharacterList>
             <ButtonContainer/>

@@ -1,5 +1,5 @@
 const ROLL = 'ROLL'
-const SHOW = 'SHOW'
+const SHOW = 'SHOW_MODAL'
 
 export const roll = (rollData, query) => {
     return {

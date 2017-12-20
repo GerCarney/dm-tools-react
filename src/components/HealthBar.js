@@ -4,10 +4,6 @@ import "./HealthBar.css"
 
 class HealthBar extends Component {
 
-    constructor(props) {
-        super(props);
-
-    }
 
     barHealth = () => {
 

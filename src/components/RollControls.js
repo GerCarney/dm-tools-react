@@ -28,7 +28,7 @@ class RollControls extends Component {
         }
 
         keyPress = (e) => {
-          if(e.keyCode == 13){
+          if(e.keyCode === 13){
             this.props.rollDice(this.state.inputVal);
             this.setState({inputVal:''})
           }
@@ -42,8 +42,8 @@ class RollControls extends Component {
    dicePresets = [20,12,10,8,6,4];
 
     diceButtons = () => {
-       return this.dicePresets.map((die)=> 
-            <SquareBtn onClick={() => this.roll('1d'+die)} icon={RollIcon}>{die}</SquareBtn>   
+       return this.dicePresets.map((die, i)=> 
+            <SquareBtn key={i} onClick={() => this.roll('1d'+die)} icon={RollIcon}>{die}</SquareBtn>   
         )
     }
 

@@ -10,28 +10,18 @@ import initiative from '../assets/time.svg'
 
 class SidebarPC extends Component {
 
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            name: "Snorre",
-            health: {
-                total: 20,
-                current: 10
-            },
-            initiative: 14
-        }
-    }
 
     render() {
+        let player = this.props.player
 
         return (
             <div className="sb-pc">
-                <div className="name">{this.state.name}</div>
-                <HealthBar total={this.state.health.total} current={this.state.health.current}/>
+                <div className="name">{player.name}</div>
+                <HealthBar total={player.health.total} current={player.health.current}/>
                 <div className="btn-row">
-                    <StatBtn icon={armorIcon}>99</StatBtn>
-                    <StatBtn icon={initiative}>21</StatBtn>
+                    <StatBtn icon={armorIcon}>{player.armor}</StatBtn>
+                    <StatBtn icon={initiative}>{player.initiative}</StatBtn>
 
                 </div>
             </div>

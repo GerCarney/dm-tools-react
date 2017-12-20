@@ -3,6 +3,8 @@ import CharacterList from '../components/CharacterList'
 import SidebarPC from '../components/SidebarPC'
 import ButtonContainer from '../components/ButtonContainer'
 
+import {connect} from 'react-redux'
+
 import './LeftBar.css'
 
 class LeftBar extends Component {
@@ -10,11 +12,10 @@ class LeftBar extends Component {
         return (
             <div className="lb">
             <CharacterList>
-                <SidebarPC/>
-                <SidebarPC/>
-                <SidebarPC/>
+            {
+                this.props.players.map((player,i) => <SidebarPC key={i} player={player} />)
+            }
             </CharacterList>
-
             <ButtonContainer/>
 
             </div>
@@ -22,4 +23,20 @@ class LeftBar extends Component {
     }
 }
 
-export default LeftBar;
+
+
+const mapStateToProps = (state) => {
+    return {
+        players: state.players
+    }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        dispatch1: () => {
+            dispatch()
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LeftBar)

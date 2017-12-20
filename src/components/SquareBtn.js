@@ -4,10 +4,6 @@ import './SquareBtn.css'
 
 class SquareBtn extends Component {
 
-    constructor(props) {
-        super(props);
-        
-    }
 
     icon = () =>{
         return {backgroundImage:'url('+this.props.icon+')'}
@@ -23,3 +19,4 @@ class SquareBtn extends Component {
 }
 
 export default SquareBtn;
+

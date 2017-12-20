@@ -4,10 +4,6 @@ import './StatBtn.css'
 
 class SquareBtn extends Component {
 
-    constructor(props) {
-        super(props);
-        
-    }
     
 
     btnStyle = () => {

@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 
-import styles from './Main.css'
+import EditModal from '../components/EditModal'
 
 class Main extends Component {
     render() {
         return (
             <div className="main">
-                <div>
-
-             
-
-                </div>
+                
+                <EditModal/>
+                
             </div>
         );
     }

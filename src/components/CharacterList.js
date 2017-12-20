@@ -10,7 +10,7 @@ class CharacterList extends Component {
     render() {
 
         return (
-            <div r className="feed">
+            <div className="feed">
                 {this.props.children}
 
             </div>

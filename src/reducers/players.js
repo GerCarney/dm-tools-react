@@ -1,6 +1,6 @@
-const rollsInitialState = [];
+const playersInitialState = [];
 
-const rolls = (state = rollsInitialState, action) => {
+const players = (state = playersInitialState, action) => {
     switch (action.type) {
         case 'ROLL':
             return [action, ...state];
@@ -9,6 +9,6 @@ const rolls = (state = rollsInitialState, action) => {
     }
 }
 
-export default rolls;
+export default players;
 
 

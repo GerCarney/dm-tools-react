@@ -6,10 +6,12 @@ import reducers from './reducers'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import initialState from './assets/initState'
+
 import './index.css';
 
 
-let store = createStore(reducers,
+let store = createStore(reducers, initialState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

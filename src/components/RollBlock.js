@@ -7,8 +7,6 @@ import './RollBlock.css'
 class RollBlock extends Component {
 
     getModifier = () => {
-
-        console.log(this.props);
         if(this.props.roll.modifier){
             return ' (+'+this.props.roll.modifier+')';
         }

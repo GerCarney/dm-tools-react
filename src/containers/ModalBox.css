@@ -1,0 +1,16 @@
+.modal{
+    position:fixed;
+    left:50%;
+    top:50%;
+}
+
+.modal h2{
+    color:white;
+    text-transform: capitalize;
+}
+
+.modal input {
+    font-size:20px;
+    text-align: center;
+    width:auto;
+}

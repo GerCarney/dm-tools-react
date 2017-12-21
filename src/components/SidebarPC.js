@@ -10,14 +10,12 @@ import initiative from '../assets/time.svg'
 
 class SidebarPC extends Component {
 
-    editValue = (stat) => {
-        this.props.editVal({
-            stat,
-            state:'player',
-            id:this.props.player.id
+    openModal = (field) => {
+        this.props.openModal({
+            section:'players',
+            id:this.props.id,
+            field
         });
-
-        console.log('clicked');
     }
 
     render() {
@@ -26,10 +24,10 @@ class SidebarPC extends Component {
         return (
             <div className="sb-pc">
                 <div className="name">{player.name}</div>
-                <HealthBar total={player.health.total} current={player.health.current}/>
+                <HealthBar onClick={() => this.openModal('hp')}  total={player.hp_total} current={player.hp}/>
                 <div className="btn-row">
-                    <StatBtn onClick={() => this.editValue('armor')} icon={armorIcon}>{player.armor}</StatBtn>
-                    <StatBtn onClick={() => this.editValue('initiative')} icon={initiative}>{player.initiative}</StatBtn>
+                    <StatBtn onClick={() => this.openModal('armor')} icon={armorIcon}>{player.armor}</StatBtn>
+                    <StatBtn onClick={() => this.openModal('initiative')} icon={initiative}>{player.initiative}</StatBtn>
 
                 </div>
             </div>

@@ -16,7 +16,7 @@ class HealthBar extends Component {
 
     render() {
         return (
-            <div className="hp-container">
+            <div className="hp-container" onClick={() => this.props.onClick()}>
                 <div className="hp-values">{this.props.current}/{this.props.total}</div>
                 <div className="hp-bar">
                     <div style={this.barHealth()} className="hp-fill"/>

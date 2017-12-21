@@ -2,11 +2,14 @@ const modalInitialState = [];
 
 const modal = (state = modalInitialState, action) => {
     switch (action.type) {
-        case 'SHOW_MODAL':
+        case 'OPEN_MODAL':
             return {
-                display:true,
-                label:action.label,
-                val:action.val
+                ...action
+            }
+        case 'CLOSE_MODAL':
+            return {
+                ...action,
+                displayed:false
             }
         default:
             return state
@@ -14,5 +17,3 @@ const modal = (state = modalInitialState, action) => {
 }
 
 export default modal;
-
-

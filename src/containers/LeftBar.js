@@ -3,14 +3,19 @@ import CharacterList from '../components/CharacterList'
 import SidebarPC from '../components/SidebarPC'
 import ButtonContainer from '../components/ButtonContainer'
 
+import {openModal} from '../actions'
+
 import {connect} from 'react-redux'
 
 import './LeftBar.css'
 
 class LeftBar extends Component {
 
-    editVal = (data) => {
-        console.log('parent',data);
+    openModal = (data) => {
+
+        var modalData = {displayed:true, ...data};
+        this.props.openModal(modalData)
+        
     }
 
     render() {
@@ -18,7 +23,7 @@ class LeftBar extends Component {
             <div className="lb">
             <CharacterList>
             {
-                this.props.players.map((player,i) => <SidebarPC editVal={this.editVal} key={i} player={player} />)
+                this.props.players.map((player,i) => <SidebarPC openModal={this.openModal} id={player.id} key={player.id} player={player} />)
             }
             </CharacterList>
             <ButtonContainer/>
@@ -36,10 +41,12 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+
+
+const mapDispatchToProps = (dispatch) => {
     return {
-        dispatch1: () => {
-            dispatch()
+        openModal: (data) => {
+            dispatch(openModal(data))
         }
     }
 }
